@@ -3,14 +3,14 @@ import { Note } from '../../interface/note';
 
 @Component({
   selector: 'app-notes',
-  templateUrl: './notes.components.html',
-  styleUrls: ['./notes.components.css'],
+  templateUrl: './notes.component.html',
+  styleUrls: ['./notes.component.css'],
 })
-export class ComponentNotes {
+export class NotesComponent {
   notes: Note[] = [
     {
       title: 'Mi primer nota',
-      description: 'Hoy usando content projection en Angular',
+      description: 'Hoy estoy usando content projection en Angular',
       isComplete: false,
       adicional: 'En stackblitz',
     },
@@ -22,7 +22,7 @@ export class ComponentNotes {
     },
     {
       title: '¿Que sera lo proximó en aprender?',
-      description: 'No se pero sera divertido',
+      description: 'No se. Pero sera divertido!!',
       isComplete: true,
     },
   ];

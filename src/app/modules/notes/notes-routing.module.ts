@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
-import { ComponentNotes } from './notes.components';
+import { NotesComponent } from './notes.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'notes', pathMatch: 'full' },
   {
     path: 'notes',
-    component: ComponentNotes,
+    component: NotesComponent,
   },
   {
     path: '**',
