@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
-import { NotesComponent } from './note/note.component';
 import { NotesRoutingModule } from './notes-routing.module';
-import { ComponentNotes } from './notes.components';
 import { CommonModule } from '@angular/common';
+
+/// Import Components
+import { NoteComponent } from './note/note.component';
+import { NotesComponent } from './notes.component';
+import { CreateNoteComponent } from './create-note/create-note.component';
 
 @NgModule({
   imports: [CommonModule, NotesRoutingModule],
-  declarations: [ComponentNotes, NotesComponent],
+  declarations: [NotesComponent, NoteComponent, CreateNoteComponent],
 })
 export class ModuleNotes {}
