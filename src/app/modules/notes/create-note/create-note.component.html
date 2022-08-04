@@ -1,7 +1,7 @@
 <div>
   <h1>Crear Nota</h1>
 
-  <form [formGroup]="form" (submit)="registar()">
+  <form [formGroup]="form" (ngSubmit)="registar()">
     <div>
       <label> Titulo: </label>
       <input
@@ -39,6 +39,6 @@
       </textarea>
     </div>
 
-    <button>Registrar</button>
+    <button type="submit" [disabled]="!form.valid">Registrar</button>
   </form>
 </div>
