@@ -1,16 +1,17 @@
-<app-create-note></app-create-note>
+<main>
+  <app-create-note (registarNote)="addNote($event)"></app-create-note>
+  <section class="container-notes">
+    <div *ngFor="let note of notes">
+      <app-note [note]="note">
+        <!-- Proyecta el contenido al ng-content header-->
+        <div header class="header-text">Soy una nota!!</div>
 
-<div class="container-notes">
-  <div *ngFor="let note of notes">
-    <app-note [note]="note">
-      <!-- Proyecta el contenido al ng-content header-->
-      <div header class="header-text">Soy una nota!!</div>
-
-      <!-- Proyecta el contenido al ng-content por defecto -->
-      <div *ngIf="note.adicional">
-        <h4 class="title-adicional">Información Adicional</h4>
-        <p>{{ note.adicional }}</p>
-      </div>
-    </app-note>
-  </div>
-</div>
+        <!-- Proyecta el contenido al ng-content por defecto -->
+        <div *ngIf="note.adicional">
+          <h4 class="title-adicional">Información Adicional</h4>
+          <p>{{ note.adicional }}</p>
+        </div>
+      </app-note>
+    </div>
+  </section>
+</main>

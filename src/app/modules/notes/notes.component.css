@@ -1,8 +1,9 @@
 .container-notes {
-  display: flex;
-  flex-flow: row nowrap;
-
   margin: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-text {

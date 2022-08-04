@@ -1,44 +1,61 @@
-<div>
-  <h1>Crear Nota</h1>
+<form class="form-note card" [formGroup]="form" (ngSubmit)="registar()">
+  <h1 class="text-center mb-3">Crear nota</h1>
 
-  <form [formGroup]="form" (ngSubmit)="registar()">
-    <div>
-      <label> Titulo: </label>
+  <div class="row mb-3">
+    <label class="col-sm-2 col-form-label"> Titulo: </label>
+    <div class="col-sm-10">
       <input
+        class="form-control"
         formControlName="title"
         type="text"
         placeholder="Ingrese un titulo"
       />
     </div>
+  </div>
 
-    <div>
-      <label> Descripcion: </label>
+  <div class="row mb-3">
+    <label class="col-sm-2 col-form-label"> Descripcion: </label>
+
+    <div class="col-sm-10">
       <input
+        class="form-control"
         formControlName="description"
         type="text"
         placeholder="Ingrese una descripción"
       />
     </div>
+  </div>
 
-    <div>
-      <label> completado: </label>
+  <div class="row mb-3">
+    <label class="col-sm-2 col-form-label">
+      Información adicional (Opcional):
+    </label>
+    <div class="col-sm-10">
+      <textarea
+        class="form-control"
+        formControlName="adicional"
+        type="text"
+        placeholder="Ingrese información adicional"
+      >
+      </textarea>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <label class="col-sm-2 form-check-label"> Completado: </label>
+    <div class="col-sm-10">
       <input
-        formControlName="complete"
+        class="form-check-input"
+        formControlName="isComplete"
         type="checkbox"
         placeholder="Ingrese una descripción"
       />
     </div>
+  </div>
 
-    <div>
-      <label> Información adicional: </label>
-      <textarea
-        formControlName="adicional"
-        type="text"
-        placeholder="Ingrese una descripción"
-      >
-      </textarea>
-    </div>
-
-    <button type="submit" [disabled]="!form.valid">Registrar</button>
-  </form>
-</div>
+  <footer class="row">
+    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">
+      Registrar
+    </button>
+  </footer>
+</form>

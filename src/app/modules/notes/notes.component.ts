@@ -26,4 +26,8 @@ export class NotesComponent {
       isComplete: true,
     },
   ];
+
+  addNote($event) {
+    this.notes.push($event);
+  }
 }
