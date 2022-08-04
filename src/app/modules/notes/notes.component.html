@@ -1,3 +1,5 @@
+<app-create-note></app-create-note>
+
 <div class="container-notes">
   <div *ngFor="let note of notes">
     <app-note [note]="note">
@@ -7,7 +9,7 @@
       <!-- Proyecta el contenido al ng-content por defecto -->
       <div *ngIf="note.adicional">
         <h4 class="title-adicional">Información Adicional</h4>
-        <p>{{note.adicional}}</p>
+        <p>{{ note.adicional }}</p>
       </div>
     </app-note>
   </div>

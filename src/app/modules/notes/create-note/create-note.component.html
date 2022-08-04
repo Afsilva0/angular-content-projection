@@ -1,0 +1,37 @@
+<div>
+  <h1>Crear Nota</h1>
+
+  <form [formGroup]="form">
+    <div>
+      <label> Titulo: </label>
+      <input
+        formControlName="title"
+        type="text"
+        value=""
+        placeholder="Ingrese un titulo"
+      />
+    </div>
+
+    <div>
+      <label> Descripcion: </label>
+      <input
+        formControlName="description"
+        type="text"
+        value=""
+        placeholder="Ingrese una descripción"
+      />
+    </div>
+
+    <div>
+      <label> completado: </label>
+      <input
+        formControlName="complete"
+        type="checkbox"
+        value=""
+        placeholder="Ingrese una descripción"
+      />
+    </div>
+
+    <button>Registrar</button>
+  </form>
+</div>
