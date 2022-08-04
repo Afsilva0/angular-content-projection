@@ -1,0 +1,19 @@
+.container-notes {
+  display: flex;
+  flex-flow: row nowrap;
+
+  margin: 10px;
+}
+
+.header-text {
+  text-align: right;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.title-adicional {
+  font-size: 20x;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  text-align: left;
+}

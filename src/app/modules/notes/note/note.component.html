@@ -1,0 +1,17 @@
+<div class="card">
+  <!-- Es el contenido proyectado con el identificador [header] -->
+  <ng-content select="[header]"></ng-content>
+
+  <h2 class="title">{{ note.title }}</h2>
+  <p class="description">{{ note.description }}</p>
+
+  <!-- Es el contenido proyectado por defecto -->
+  <ng-content></ng-content>
+
+  <small *ngIf="note.isComplete; else incompleta" class="complete">
+    Completada</small
+  >
+  <ng-template #incompleta>
+    <small class="incomplete"> Incompleta</small>
+  </ng-template>
+</div>
