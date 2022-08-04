@@ -1,13 +1,12 @@
 <div>
   <h1>Crear Nota</h1>
 
-  <form [formGroup]="form">
+  <form [formGroup]="form" (submit)="registar()">
     <div>
       <label> Titulo: </label>
       <input
         formControlName="title"
         type="text"
-        value=""
         placeholder="Ingrese un titulo"
       />
     </div>
@@ -17,7 +16,6 @@
       <input
         formControlName="description"
         type="text"
-        value=""
         placeholder="Ingrese una descripción"
       />
     </div>
@@ -27,9 +25,18 @@
       <input
         formControlName="complete"
         type="checkbox"
-        value=""
         placeholder="Ingrese una descripción"
       />
+    </div>
+
+    <div>
+      <label> Información adicional: </label>
+      <textarea
+        formControlName="adicional"
+        type="text"
+        placeholder="Ingrese una descripción"
+      >
+      </textarea>
     </div>
 
     <button>Registrar</button>

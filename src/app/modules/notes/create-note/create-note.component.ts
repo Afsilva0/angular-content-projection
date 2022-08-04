@@ -12,8 +12,9 @@ export class CreateNoteComponent implements OnInit {
   constructor(public formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
       title: ['', [Validators.required]],
-      description: ['', []],
-      complete: ['', []],
+      description: ['', [Validators.required]],
+      complete: [false, []],
+      adicional: ['', []],
     });
   }
 
