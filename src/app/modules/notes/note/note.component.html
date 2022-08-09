@@ -1,6 +1,10 @@
 <article class="card">
   <header>
     <!-- Es el contenido proyectado con el identificador [header] -->
+    <div class="d-flex justify-content-end mb-2">
+      <button class="btn btn-outline-danger" (click)="cerrar()">✗</button>
+    </div>
+
     <ng-content select="[header]"></ng-content>
     <h2 class="title">{{ note.title }}</h2>
   </header>

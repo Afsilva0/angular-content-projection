@@ -1,8 +1,8 @@
 <main>
   <app-create-note (registarNote)="addNote($event)"></app-create-note>
   <section class="container-notes">
-    <div *ngFor="let note of notes">
-      <app-note [note]="note">
+    <div *ngFor="let note of notes; let i = index">
+      <app-note [note]="note" [id]="i" (closeEmitter)="removeNote($event)">
         <!-- Proyecta el contenido al ng-content header-->
         <div header class="header-text">Soy una nota!!</div>
 

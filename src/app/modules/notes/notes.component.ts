@@ -27,7 +27,11 @@ export class NotesComponent {
     },
   ];
 
-  addNote($event) {
+  addNote($event: Note) {
     this.notes.push($event);
+  }
+
+  removeNote($event: number) {
+    this.notes.splice($event, 1);
   }
 }
